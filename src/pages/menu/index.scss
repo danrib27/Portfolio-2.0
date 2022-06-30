@@ -1,0 +1,72 @@
+#orbital {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-height: 100vh;
+}
+p {
+    width: 40%;
+    position: relative;
+    top: 15vh;
+    left: 3.5vw;
+}
+
+.text{
+    &-regular {
+        color: #d1d1d1;
+        font-weight: 400;
+        font-size: 0.9em;
+
+        &-pink {
+            color: #F475BF;
+        }
+
+    }
+    &-bold {
+        color: #F1FA8C;
+        font-weight: 700;
+        font-size: 1.5em;
+
+        &-purple {
+            color: #BD93F9;
+        }
+        &-cian {
+            color: #8BE9FD;
+        }
+    }
+}
+
+p:hover {
+    cursor: default;
+}
+
+p {
+    animation: moveToRight 2.5s ease;
+
+    @keyframes moveToRight {
+        0% {
+            transform: translateX(-320px);
+            opacity: 0%;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 100%;
+        }
+    }
+}
+
+#orbital {
+    animation: transOpacity 2s ease;
+
+    @keyframes transOpacity {
+        0% {
+            opacity: 0%;
+            height: 50%;
+            top: 25%;
+        }
+        100% {
+            opacity: 100%;
+            height: 100%;
+        }
+    }
+}

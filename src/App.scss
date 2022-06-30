@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    align-items: center;
+    
+    a {
+        margin: 20px 0 20px 3%;
+        
+        #logo {
+            height: 2em;
+        }
+    }
+}
+
+li {
+    list-style: none;
+    float: left;
+    margin: 0 20px;
+
+    button {
+        background: none;
+
+    }
+}
+
+.midia {
+    position: absolute;
+
+    bottom: 0;
+    width: 3.5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+svg {
+    margin: 12px 10px;
+    fill: #393E46;
+}
+
+button:hover, #logo:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    color: #D65A31;
+    transition: .4s linear;
+}
