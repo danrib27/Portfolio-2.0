@@ -40,8 +40,8 @@ p:hover {
     cursor: default;
 }
 
-p {
-    animation: moveToRight 2.5s ease;
+#codeApresentation {
+    animation: moveToRight 2.2s ease;
 
     @keyframes moveToRight {
         0% {

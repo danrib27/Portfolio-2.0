@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background: red;
+    height: 300px;
+    width: auto;
+
+    .text {
+        align-items: flex-start;
+    }
+
+    svg {
+        height: 1em;
+    }
+
+    .svg-list {
+        background: blue;
+    }
+}

@@ -4,6 +4,7 @@ import './App.scss'
 
 import { Menu } from './pages/menu/Menu'
 import { About } from './pages/about/About'
+import { Contact } from './pages/contact/Contact';
 
 
 
@@ -13,6 +14,15 @@ export function App() {
   function HandleComponent() {
     if(component == 1) {
       return <About />
+    }
+    if(component == 2) {
+      return <About />
+    }
+    if(component == 3) {
+      return <About />
+    }
+    if(component == 4) {
+      return <Contact />
     }
     return <Menu />
   }

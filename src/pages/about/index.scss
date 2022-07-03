@@ -1,3 +1,78 @@
-p:hover {
-    cursor: default;
+#about {   
+    display: flex;
+    flex-direction: row;
+    width: 93vw;
+    height: 80vh;
+    margin: 0 3.5vw;
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.banner-tech {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #393E46;
+    border-radius: 4px;
+    height: 33%;
+    margin: 5px 20px;
+
+    span {
+        margin: 20px 10px 0 20px;
+    }
+
+    .tittle {
+        font-weight: 400;
+        font-size: 1.5em;
+    }
+    .description {
+        width: auto;
+    }
+    .svg-list {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        height: 15%;
+
+        svg {
+            margin: 0 10px 0 0;
+            fill: #222831;
+            height: 100%;
+        }
+    }
+}
+
+#text-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+
+    img {
+        border-radius: 100%;
+    }
+
+    span {
+        text-align: justify;
+        max-width: 400px;
+        margin: 20px 10px 0 20px;
+    }
+    .text-1 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 2em;
+    }
+    .text-2 {
+        font-weight: 400;
+        font-size: 1em;
+    }
+    .text-3 {
+        font-weight: 400;
+        font-size: 1em;
+    }
 }
