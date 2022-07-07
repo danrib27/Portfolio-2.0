@@ -6,7 +6,7 @@ export function About() {
     return (
         <div id="about">
             <div className="banner-container">
-                <div className="banner-tech">
+                <div className="banner-tech banner-front">
                     <span className='tittle'>Front-end</span>
                     <span className='description'>in a modern and responsivy way</span>
                     <div className='svg-list'>
@@ -21,7 +21,7 @@ export function About() {
                         </svg>
                     </div>
                 </div>
-                <div className="banner-tech">
+                <div className="banner-tech banner-back">
                     <span className='tittle'>Back-end</span>
                     <span className='description'>embased on best practices as SOLID and REST</span>
                     <div className='svg-list'>
@@ -36,7 +36,7 @@ export function About() {
                         </svg>
                     </div>
                 </div>
-                <div className="banner-tech">
+                <div className="banner-tech banner-developing">
                     <span className='tittle'>Developing</span>
                     <span className='description'>with techniques and technologies on the market</span>
                     <div className='svg-list'>
