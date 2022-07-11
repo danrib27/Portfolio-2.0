@@ -1,0 +1,18 @@
+.works {
+    display: flex;
+    flex-direction: column;
+    width: 93vw;
+    height: 80vh;
+    margin: 0 3.5vw;
+
+    align-items: center;
+
+    .congratulations {
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+    img {
+        height: 80%;
+    }
+}
