@@ -33,7 +33,7 @@ export function Contact() {
 	                    <path d="M321.688,141.552l21.213,21.213L162.768,342.898l-21.213-21.213L321.688,141.552z"/>
                     </g>
                 </svg>
-                <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16318114.47700193!2d-57.109252977854815!3d-3.1172745325950837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a46669f5986e5f%3A0xe336db2d6ab189cc!2sBel%C3%A9m%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1657311961850!5m2!1spt-BR!2sbr" loading="lazy" Referrer-Policy="no-referrer-when-downgrade"></iframe>
+                <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16318114.47700193!2d-57.109252977854815!3d-3.1172745325950837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a46669f5986e5f%3A0xe336db2d6ab189cc!2sBel%C3%A9m%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1657311961850!5m2!1spt-BR!2sbr" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 
                 <span className='email-copy'>danielduarte.tech@protonmail.com</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 460" xmlSpace="preserve">
