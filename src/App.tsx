@@ -4,8 +4,9 @@ import './App.scss'
 
 import { Menu } from './pages/menu/Menu'
 import { About } from './pages/about/About'
-import { Contact } from './pages/contact/Contact';
-
+import { Works } from './pages/works/Works'
+import { Training } from './pages/training/Training'
+import { Contact } from './pages/contact/Contact'
 
 
 export function App() {
@@ -16,10 +17,10 @@ export function App() {
       return <About />
     }
     if(component == 2) {
-      return <About />
+      return <Works />
     }
     if(component == 3) {
-      return <About />
+      return <Training />
     }
     if(component == 4) {
       return <Contact />
@@ -34,8 +35,8 @@ export function App() {
         <nav>
           <ul>
             <li><button onClick={()=>setComponent(1)}>.ABOUT()</button></li>
-            <li><button onClick={()=>setComponent(2)}>.WORKS()</button></li>
-            <li><button onClick={()=>setComponent(3)}>.TRAINING()</button></li>
+            {/* <li><button onClick={()=>setComponent(2)}>.WORKS()</button></li>
+            <li><button onClick={()=>setComponent(3)}>.TRAINING()</button></li> */}
             <li><button onClick={()=>setComponent(4)}>.CONTACT()</button></li>
           </ul>
         </nav>
