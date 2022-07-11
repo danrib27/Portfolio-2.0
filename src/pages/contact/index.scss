@@ -1,19 +1,95 @@
-.container {
+.contact {
     display: flex;
-    flex-direction: column;
-    background: red;
-    height: 300px;
-    width: auto;
+    flex-direction: row;
+    width: 93vw;
+    height: 80vh;
+    margin: 0 3.5vw;    
+    
+    .form-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        align-items: center;
 
-    .text {
-        align-items: flex-start;
+        gap: 30px;
+
+        span {
+            max-width: 500px;
+        }
+        .text-main {
+            font-weight: 700;
+            font-size: 1.5em;
+
+        }
+        .text-description {
+            text-align: justify;
+        }
+    }
+    form {
+        width: 75%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        grid-gap: 10px;
+
+        input, textarea {
+            font-size: 0.9em;
+            height: 3em;
+            background: #393E46;
+            outline: none;
+            color: #d1d1d1;
+        }
+        .subject-input, textarea, button {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        textarea {
+            height: 144px;
+            font-size: 1em;
+
+        }
+
+        button {
+            height: 2em;
+
+            background: #393E46;
+        }
     }
 
-    svg {
-        height: 1em;
-    }
+    #map {
+        flex: 1;
+        .map-container {
+            padding: 30px;
+            width: 70%;
+    
+            display:grid;
+            grid-template-columns: 10fr 1fr;
+    
+            grid-row-gap: 20px;
 
-    .svg-list {
-        background: blue;
+            .map {
+                width: calc(100% - 2.2em);
+                height: 10.95em;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+
+        span {
+            height: 2em;
+            align-self: center;
+            padding: 6px;
+            background: #393E46;
+        }
+        svg {
+            height: 1.2em;
+        }
+        button {
+            height: 2em;
+
+            background: #D65A31;
+        }
     }
 }
