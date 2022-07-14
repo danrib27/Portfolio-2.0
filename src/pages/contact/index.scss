@@ -61,50 +61,71 @@
 
     #map {
         flex: 1;
+        display: flex;
+        justify-content: center;
+        
         .map-container {
-            padding: 30px;
             width: 70%;
-    
-            display:grid;
-            grid-template-columns: 10fr 1fr;
-    
-            grid-row-gap: 20px;
-
-            .map {
-                width: calc(100% - 2.5em);
-                height: 10.95em;
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-        }
-
-        span {
-            height: 2em;
-            align-self: center;
-            padding: 6px;
-            background: #393E46;
-        }
-        .copy-button, .redirect-map {
-            height: 2em;
+            height: 447px;
             display: flex;
-            align-items: center;
-            padding: 0;
-        }
-        .copy-button {
-            background: none;
-        }
-        svg {
-            height: 1.2em;
-        }
-        .cv-download {
-            height: 2em;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
 
-            background: #D65A31;
+            .address-container, .copy-container {
+                display: flex;
+
+                .google-map {
+                    background-color: gray;
+                    height: 1000px;
+                }
+    
+                span {
+                    width: 20em;
+                    border: solid 1px #393E46;
+                }
+                button, a {
+                    background-color: #393E46;
+                }
+                span, button, a {
+                    height: 2em;
+    
+                    display: flex;
+                    align-items: center;
+                    padding: 0;
+    
+                    svg {
+                        height: 1em;
+                        fill: #d1d1d1;
+                    }
+                }
+            }
+            .copied-container {
+                display: flex;
+                align-items: center;
+                height: 2em;
+                border: solid 1px #D65A31;
+
+                .copied-span {
+                    width: auto;
+                    height: 1em;
+                }
+            }
+
+            .cv-button {
+                width: 10em;
+                height: 2em;
+                background-color: #393E46;
+            }
         }
     }
 }
 
-.copy-button:active {
+.redirect-map:active {
     border: solid 1px #D65A31;
-    margin-left: 30px;
+    height: calc(2em - 2px);
+}
+
+.copy-button:active {
+    height: calc(2em - 2px);
 }
