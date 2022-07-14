@@ -35,6 +35,7 @@
         grid-gap: 10px;
 
         input, textarea {
+            font: 400 1em 'JetBrains Mono', monospace;
             font-size: 0.9em;
             height: 3em;
             background: #393E46;
@@ -47,7 +48,7 @@
         }
         textarea {
             height: 144px;
-            font-size: 1em;
+            font-size: 0.85em;
 
         }
 
@@ -70,7 +71,7 @@
             grid-row-gap: 20px;
 
             .map {
-                width: calc(100% - 2.2em);
+                width: calc(100% - 2.5em);
                 height: 10.95em;
                 grid-column-start: 1;
                 grid-column-end: 3;
@@ -83,13 +84,27 @@
             padding: 6px;
             background: #393E46;
         }
+        .copy-button, .redirect-map {
+            height: 2em;
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+        .copy-button {
+            background: none;
+        }
         svg {
             height: 1.2em;
         }
-        button {
+        .cv-download {
             height: 2em;
 
             background: #D65A31;
         }
     }
+}
+
+.copy-button:active {
+    border: solid 1px #D65A31;
+    margin-left: 30px;
 }
