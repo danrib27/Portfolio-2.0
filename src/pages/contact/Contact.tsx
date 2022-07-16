@@ -2,8 +2,49 @@ import { useState } from 'react';
 import './index.scss'
 
 export function Contact() {
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    const [emailEmpyt, setEmailEmpyt] = useState('');
+    const [nameEmpyt, setNameEmpyt] = useState('');
+    const [subjectEmpyt, setSubjectEmpyt] = useState('');
+    const [messageEmpyt, setMessageEmpyt] = useState('');
+
     const  [copyButton01, setCopyButton01] = useState(false);
     const  [copyButton02, setCopyButton02] = useState(false);
+
+    function validation(e:React.FormEvent<HTMLFormElement>) {
+
+        let empty = false;
+        setEmailEmpyt('');
+        setNameEmpyt('');
+        setSubjectEmpyt('');
+        setMessageEmpyt('');
+
+        if (email == '') {
+            setEmailEmpyt('-empty');
+            empty = true;
+        }
+        if (name == '') {
+            setNameEmpyt('-empty');
+            empty = true;
+        }
+        if (subject == '') {
+            setSubjectEmpyt('-empty');
+            empty = true;
+        }
+        if(message == '') {
+            setMessageEmpyt('-empty');
+            empty = true;
+        }
+        if(empty == true){
+            e.preventDefault();
+            return false;
+        }
+        return true;
+    }
 
     async function copy(str: string) {
         await navigator.clipboard.writeText(str);
@@ -29,13 +70,11 @@ export function Contact() {
             <div className='form-container'>
                 <span className='text-main'>Lets's be working partners? </span>
                 <span className='text-description'>I'm interested in opportunities, especially those with great profissional propercts. So, please, any question fell free to contact me. </span>
-                <form action="https://formsubmit.co/danielduarte.tech@protonmail.com" method="POST">
-                    <input type="hidden" name="_next" value="http://localhost:3000/" />
-
-                    <input className='email-input' type="email" name="email" placeholder='Email' autoComplete='off' required />
-                    <input className='name-input' type="text" name="name" placeholder='Name' autoComplete='off' required />
-                    <input className='subject-input' type="text" name="subject" placeholder='Subject' autoComplete='off' required />
-                    <textarea name="Message" placeholder='Message' autoComplete='off' required />
+                <form onSubmit={validation} action="https://formsubmit.co/danielduarte.tech@protonmail.com" method="POST" target='_blank'>
+                    <input className={'email-input'+emailEmpyt} type="email" name="email" placeholder='Email' autoComplete='off' value={email} onChange={(e)=>{setEmail(e.target.value)}} />
+                    <input className={'name-input'+nameEmpyt} type="text" name="name" placeholder='Name' autoComplete='off' value={name}  onChange={(e)=>{setName(e.target.value)}}/>
+                    <input className={'subject-input'+subjectEmpyt} type="text" name="subject" placeholder='Subject' autoComplete='off' value={subject} onChange={(e)=>{setSubject(e.target.value)}} />
+                    <textarea className={'textarea'+messageEmpyt} name="Message" placeholder='Message' autoComplete='off' value={message}  onChange={(e)=>{setMessage(e.target.value)}}/>
                     <button type="submit">Send</button>
                 </form>
             </div>
@@ -67,7 +106,7 @@ export function Contact() {
                 <span className='email-copy'>danielduarte.tech@protonmail.com</span>
                 <button className='copy-button' onClick={()=>{
                     copy('danielduarte.tech@protonmail.com');
-                    timer01();
+                    timer01;
                 }}>
                 {copyButton01
                     ? <div className='copied-container'>
@@ -100,7 +139,7 @@ export function Contact() {
                 <span className='website-copy'>danielduarte.dev</span>
                 <button className='copy-button' onClick={()=>{
                     copy('https://danielduarte.dev');
-                    timer02();
+                    timer02;
                 }}>
                 {copyButton02
                     ? <div className='copied-container'>
