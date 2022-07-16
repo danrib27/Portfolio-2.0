@@ -16,7 +16,6 @@ export function Contact() {
     const  [copyButton02, setCopyButton02] = useState(false);
 
     function validation(e:React.FormEvent<HTMLFormElement>) {
-
         let empty = false;
         setEmailEmpyt('');
         setNameEmpyt('');
@@ -50,14 +49,14 @@ export function Contact() {
         await navigator.clipboard.writeText(str);
     }
 
-    function timer01() {
+    function handleButton1() {
         setCopyButton01(true);
         const time = setTimeout(()=>{
             setCopyButton01(false);
         }, 1400);
         return ()=> clearInterval(time);
     }
-    function timer02() {
+    function handleButton2() {
         setCopyButton02(true);
         const time = setTimeout(()=>{
             setCopyButton02(false);
@@ -106,7 +105,7 @@ export function Contact() {
                 <span className='email-copy'>danielduarte.tech@protonmail.com</span>
                 <button className='copy-button' onClick={()=>{
                     copy('danielduarte.tech@protonmail.com');
-                    timer01;
+                    handleButton1();
                 }}>
                 {copyButton01
                     ? <div className='copied-container'>
@@ -139,7 +138,7 @@ export function Contact() {
                 <span className='website-copy'>danielduarte.dev</span>
                 <button className='copy-button' onClick={()=>{
                     copy('https://danielduarte.dev');
-                    timer02;
+                    handleButton2();
                 }}>
                 {copyButton02
                     ? <div className='copied-container'>
