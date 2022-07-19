@@ -5,7 +5,7 @@
     height: 80vh;
     margin: 0 3.5vw;    
     
-    .form-container {
+    .formContainer {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -17,12 +17,12 @@
         span {
             max-width: 500px;
         }
-        .text-main {
+        .textMain {
             font-weight: 700;
             font-size: 1.5em;
 
         }
-        .text-description {
+        .textDescription {
             text-align: justify;
         }
     }
@@ -42,7 +42,7 @@
             outline: none;
             color: #d1d1d1;
         }
-        .subject-input, textarea, button {
+        .subjectInput, textarea, button {
             grid-column-start: 1;
             grid-column-end: 3;
         }
@@ -59,12 +59,12 @@
         }
     }
 
-    #map {
+    .map {
         flex: 1;
         display: flex;
         justify-content: center;
         
-        .map-container {
+        .mapContainer {
             width: 70%;
             height: 75%;
             display: flex;
@@ -72,7 +72,7 @@
             align-items: flex-start;
             justify-content: space-between;
 
-            .address-container, .copy-container {
+            .addressContainer, .copyContainer {
                 display: flex;
     
                 span {
@@ -96,19 +96,19 @@
                 }
             }
 
-            .number-text {
+            .numberText {
                 width: 20em;
                 font-weight: 400;
                 text-align: justify;
                 color: #A27B5C;
             }
-            .copied-container {
+            .copiedContainer {
                 display: flex;
                 align-items: center;
                 height: 2em;
                 border: solid 1px #D65A31;
 
-                .copied-span {
+                .copiedSpan {
                     width: auto;
                     height: 1em;
                 }
@@ -117,29 +117,29 @@
     }
 }
 
-.redirect-map:active {
+.redirectMap:active {
     border: solid 1px #D65A31;
     height: calc(2em - 2px);
 }
 
-.copy-button:active {
+.copyButton:active {
     height: calc(2em - 2px);
 }
 
-.email-input-empty, .name-input-empty, .subject-input-empty, .textarea-empty{
+.emailInputEmpty, .nameInputEmpty, .subjectInputEmpty, .textareaEmpty{
     border-bottom: solid 2px #C02739;
 }
-.subject-input-empty{
+.subjectInputEmpty{         // Fix a bug
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.form-container {
-    animation: moveToLeft 1.5s ease;
+.formContainer {
+    animation: moveToLeft 1.3s ease;
 
     @keyframes moveToLeft {
         0% {
-            transform: translateX(80px);
+            transform: translateX(60px);
             opacity: 0%;
         }
         100% {
@@ -150,12 +150,12 @@
     opacity: 100%;
 }
 
-.map-container {
-    animation: moveToRight 1.5s ease;
+.mapContainer {
+    animation: moveToRight 1.3s ease;
 
     @keyframes moveToRight {
         0% {
-            transform: translateX(-80px);
+            transform: translateX(-60px);
             opacity: 0%;
         }
         100% {

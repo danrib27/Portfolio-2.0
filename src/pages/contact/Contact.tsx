@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './index.scss'
+import styles from './index.module.scss'
 
 export function Contact() {
     const [email, setEmail] = useState('');
@@ -24,19 +24,19 @@ export function Contact() {
         setMessageEmpyt('');
 
         if (email == '') {
-            setEmailEmpyt('-empty');
+            setEmailEmpyt('Empty');
             empty = true;
         }
         if (name == '') {
-            setNameEmpyt('-empty');
+            setNameEmpyt('empty');
             empty = true;
         }
         if (subject == '') {
-            setSubjectEmpyt('-empty');
+            setSubjectEmpyt('Empty');
             empty = true;
         }
         if(message == '') {
-            setMessageEmpyt('-empty');
+            setMessageEmpyt('Empty');
             empty = true;
         }
         if(empty == true){
@@ -73,24 +73,24 @@ export function Contact() {
     }
 
     return (
-        <div className="contact">
-            <div className='form-container'>
-                <span className='text-main'>Lets's be working partners? </span>
-                <span className='text-description'>I'm interested in opportunities, especially those with great profissional propercts. So, please, any question fell free to contact me. </span>
+        <div className={styles.contact}>
+            <div className={styles.formContainer}>
+                <span className={styles.textMain}>Lets's be working partners? </span>
+                <span className={styles.textDescription}>I'm interested in opportunities, especially those with great profissional propercts. So, please, any question fell free to contact me. </span>
                 <form onSubmit={validation} action="https://formsubmit.co/danielduarte.tech@protonmail.com" method="POST" target='_blank'>
-                    <input className={'email-input'+emailEmpyt} type="email" name="email" placeholder='Email' autoComplete='off' value={email} onChange={(e)=>{setEmail(e.target.value)}} />
-                    <input className={'name-input'+nameEmpyt} type="text" name="name" placeholder='Name' autoComplete='off' value={name}  onChange={(e)=>{setName(e.target.value)}}/>
-                    <input className={'subject-input'+subjectEmpyt} type="text" name="subject" placeholder='Subject' autoComplete='off' value={subject} onChange={(e)=>{setSubject(e.target.value)}} />
-                    <textarea className={'textarea'+messageEmpyt} name="Message" placeholder='Message' autoComplete='off' value={message}  onChange={(e)=>{setMessage(e.target.value)}}/>
+                    <input className={styles.emailInput+emailEmpyt} type="email" name="email" placeholder='Email' autoComplete='off' value={email} onChange={(e)=>{setEmail(e.target.value)}} />
+                    <input className={styles.nameInput+nameEmpyt} type="text" name="name" placeholder='Name' autoComplete='off' value={name}  onChange={(e)=>{setName(e.target.value)}}/>
+                    <input className={styles.subjectInput+subjectEmpyt} type="text" name="subject" placeholder='Subject' autoComplete='off' value={subject} onChange={(e)=>{setSubject(e.target.value)}} />
+                    <textarea className={styles.textarea+messageEmpyt} name="Message" placeholder='Message' autoComplete='off' value={message}  onChange={(e)=>{setMessage(e.target.value)}}/>
                     <button type="submit">Send</button>
                 </form>
             </div>
 
-            <div id="map">
-                <div className='map-container'>
-                    <div className='address-container'>
-                        <span className='adress-copy'>Belém, State of Pará - BR</span>
-                        <a className="redirect-map" href='https://www.google.com/maps/@-1.4599722,-48.4908691,6z' target="_blank">
+            <div className={styles.map}>
+                <div className={styles.mapContainer}>
+                    <div className={styles.addressContainer}>
+                        <span className={styles.adressCopy}>Belém, State of Pará - BR</span>
+                        <a className={styles.redirectMap} href='https://www.google.com/maps/@-1.4599722,-48.4908691,6z' target="_blank">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 484.457 484.457" xmlSpace="preserve">
                                 <g>
 	                                <path d="M447.112,37.345C423.031,13.263,391.012,0,356.957,0c-34.057,0-66.075,13.263-90.156,37.345L166.215,137.931l21.213,21.213
@@ -106,23 +106,23 @@ export function Contact() {
                             </svg>
                         </a>
                     </div>
-                    <div className='google-map'>
-                        <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16318114.47700193!2d-57.109252977854815!3d-3.1172745325950837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a46669f5986e5f%3A0xe336db2d6ab189cc!2sBel%C3%A9m%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1657311961850!5m2!1spt-BR!2sbr" width="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <div className={styles.googleMap}>
+                        <iframe className={styles.map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16318114.47700193!2d-57.109252977854815!3d-3.1172745325950837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a46669f5986e5f%3A0xe336db2d6ab189cc!2sBel%C3%A9m%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1657311961850!5m2!1spt-BR!2sbr" width="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <div className='copy-container'>
-                        <span className='email-copy'>danielduarte.tech@protonmail.com</span>
-                        <button className='copy-button' onClick={()=>{
+                    <div className={styles.copyContainer}>
+                        <span className={styles.emailCopy}>danielduarte.tech@protonmail.com</span>
+                        <button className={styles.copyButton} onClick={()=>{
                             copy('danielduarte.tech@protonmail.com');
                             handleButton1();
                         }}>
                         {copyButton01
-                            ? <div className='copied-container'>
+                            ? <div className={styles.copiedContainer}>
                                 <svg viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
                                     <circle fill="#4CAF50" cx="24" cy="24" r="21"/>
                                     <polygon fill="#CCFF90" points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"/>
                                 </svg>
-                                <span className='copied-span'>Copied !</span>
+                                <span className={styles.copiedSpan}>Copied !</span>
                             </div>    
                             : <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 460" xmlSpace="preserve">
                                 <g>
@@ -143,19 +143,19 @@ export function Contact() {
                         </button>
                     </div>
 
-                    <div className='copy-container'>
-                        <span className='website-copy'>danielduarte.dev</span>
-                        <button className='copy-button' onClick={()=>{
+                    <div className={styles.copyContainer}>
+                        <span className={styles.websiteCopy}>danielduarte.dev</span>
+                        <button className={styles.copyButton} onClick={()=>{
                             copy('https://danielduarte.dev');
                             handleButton2();
                         }}>
                         {copyButton02
-                            ? <div className='copied-container'>
+                            ? <div className={styles.copiedContainer}>
                                 <svg viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
                                     <circle fill="#4CAF50" cx="24" cy="24" r="21"/>
                                     <polygon fill="#CCFF90" points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"/>
                                 </svg>
-                                <span className='copied-span'>Copied !</span>
+                                <span className={styles.copiedSpan}>Copied !</span>
                             </div>
                             : <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 460" xmlSpace="preserve">
                                 <g>
@@ -176,19 +176,19 @@ export function Contact() {
                         </button>
                     </div>
 
-                    <div className='copy-container'>
-                        <span className='website-copy'>@danrib27</span>
-                        <button className='copy-button' onClick={()=>{
+                    <div className={styles.copyContainer}>
+                        <span className={styles.websiteCopy}>@danrib27</span>
+                        <button className={styles.copyButton} onClick={()=>{
                             copy('@danrib27');
                             handleButton3();
                         }}>
                         {copyButton03
-                            ? <div className='copied-container'>
+                            ? <div className={styles.copiedContainer}>
                                 <svg viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
                                     <circle fill="#4CAF50" cx="24" cy="24" r="21"/>
                                     <polygon fill="#CCFF90" points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"/>
                                 </svg>
-                                <span className='copied-span'>Copied !</span>
+                                <span className={styles.copiedSpan}>Copied !</span>
                             </div>
                             : <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 460" xmlSpace="preserve">
                                 <g>
@@ -209,7 +209,7 @@ export function Contact() {
                         </button>
                     </div>
                     
-                    <span className='number-text'>If you wanna talk to me directly, this is my Telegram. </span>
+                    <span className={styles.numberText}>If you wanna talk to me directly, this is my Telegram. </span>
                 </div>
             </div>
         </div>
