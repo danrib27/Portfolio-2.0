@@ -133,3 +133,35 @@
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
+.form-container {
+    animation: moveToLeft 1.5s ease;
+
+    @keyframes moveToLeft {
+        0% {
+            transform: translateX(80px);
+            opacity: 0%;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 100%;
+        }
+    }
+    opacity: 100%;
+}
+
+.map-container {
+    animation: moveToRight 1.5s ease;
+
+    @keyframes moveToRight {
+        0% {
+            transform: translateX(-80px);
+            opacity: 0%;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 100%;
+        }
+    }
+    opacity: 100%;
+}
