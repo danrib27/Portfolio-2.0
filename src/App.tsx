@@ -1,13 +1,14 @@
 import { useState } from 'react'
 
-import './App.scss'
-
 import { Menu } from './pages/menu/Menu'
 import { About } from './pages/about/About'
 import { Works } from './pages/works/Works'
 import { Training } from './pages/training/Training'
 import { Contact } from './pages/contact/Contact'
 
+import './App.scss'
+
+import logo from './assets/svg/logo.svg'
 
 export function App() {
   const [component, setComponent] = useState(0);
@@ -31,7 +32,7 @@ export function App() {
   return (
     <div>
       <header>
-        <a onClick={()=>setComponent(0)}><img id="logo" src="./src/assets/svg/logo.svg"/></a>
+        <a onClick={()=>setComponent(0)}><img id="logo" src={logo} /></a>
         <nav>
           <ul>
             <li><button onClick={()=>setComponent(1)}>.ABOUT()</button></li>
