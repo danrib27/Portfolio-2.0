@@ -26,7 +26,8 @@ li {
     position: absolute;
 
     bottom: 0;
-    width: 3.5vw;
+    width: 3em;
+    min-width: 2.5em;
 
     display: flex;
     flex-direction: column;
