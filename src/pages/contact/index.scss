@@ -66,7 +66,7 @@
         
         .map-container {
             width: 70%;
-            height: 447px;
+            height: 75%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -74,11 +74,6 @@
 
             .address-container, .copy-container {
                 display: flex;
-
-                .google-map {
-                    background-color: gray;
-                    height: 1000px;
-                }
     
                 span {
                     width: 20em;
@@ -100,6 +95,13 @@
                     }
                 }
             }
+
+            .number-text {
+                width: 20em;
+                font-weight: 400;
+                text-align: justify;
+                color: #A27B5C;
+            }
             .copied-container {
                 display: flex;
                 align-items: center;
@@ -110,12 +112,6 @@
                     width: auto;
                     height: 1em;
                 }
-            }
-
-            .cv-button {
-                width: 10em;
-                height: 2em;
-                background-color: #393E46;
             }
         }
     }
