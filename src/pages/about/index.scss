@@ -13,6 +13,8 @@
 }
 
 .banner-tech {
+    opacity: 0%;    // Para tentar apagar o elemento antes da animação
+    
     position: relative;
     display: flex;
     flex-direction: column;
@@ -20,8 +22,6 @@
     border-radius: 4px;
     height: 33%;
     margin: 5px 20px;
-
-    transition: .2s linear;
 
     span {
         margin: 20px 10px 0 20px;
@@ -94,5 +94,66 @@
 .banner-developing:hover {
     .tittle {
         color: #F05032;
+    }
+}
+
+.banner-tech:nth-child(1) {
+    animation: moveToRight 2s ease;
+
+    @keyframes moveToRight {
+        0% {
+            transform: translateX(-220px);
+            opacity: 0%;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 100%;
+        }
+    }
+    opacity: 100%;
+}
+.banner-tech:nth-child(2) {
+    animation: moveToRight 2s ease .2s;
+
+    @keyframes moveToRight {
+        0% {
+            transform: translateX(-220px);
+            opacity: 0%;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 100%;
+        }
+    }
+    opacity: 100%;
+}
+.banner-tech:nth-child(3) {
+    animation: moveToRight 2s ease .4s;
+
+    @keyframes moveToRight {
+        0% {
+            transform: translateX(-220px);
+            opacity: 0%;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 100%;
+        }
+    }
+    opacity: 100%;
+}
+
+#text-description {
+    animation: moveToLeft 2s ease;
+
+    @keyframes moveToLeft {
+        0% {
+            transform: translateX(220px);
+            opacity: 0%;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 100%;
+        }
     }
 }
