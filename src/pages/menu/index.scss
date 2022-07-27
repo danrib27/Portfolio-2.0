@@ -2,7 +2,11 @@
     position: absolute;
     right: 0;
     top: 0;
+
     max-height: 100vh;
+    opacity: 60%;       // Perfect is 80%
+
+    z-index: -1;
 }
 p {
     width: 40%;
@@ -36,6 +40,7 @@ p {
     }
 }
 
+// Effects
 p:hover {
     cursor: default;
 }
@@ -65,8 +70,51 @@ p:hover {
             top: 25%;
         }
         100% {
-            opacity: 100%;
+            opacity: 60%;
             height: 100%;
         }
+    }
+}
+
+// Media
+
+// Tablet - 768px/582px
+@media (max-width: 768px) {
+    html{
+        font-size: 80%;
+    }
+    #orbital {
+        width: 80vw;
+        top: 15vh;
+    }
+    p {
+        width: 96.5vw;
+        position: relative;
+        top: 15vh;
+        left: 3.5vw;
+    }
+}
+// Mobile S - 320px/582px
+@media (max-width: 360px) {
+    html{
+        font-size: 80%;
+    }
+    p {
+        width: 96.5vw;
+        position: relative;
+        top: 15vh;
+        left: 3.5vw;
+    }
+}
+// Mobile S - 320px/582px
+@media (max-width: 320px) {
+    html{
+        font-size: 70%;
+    }
+    p {
+        width: 96.5vw;
+        position: relative;
+        top: 15vh;
+        left: 3.5vw;
     }
 }
