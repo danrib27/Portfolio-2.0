@@ -6,13 +6,13 @@
     margin: 0 3.5vw;
 }
 
-.banner-container {
+.bannerContainer {
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.banner-tech {
+.bannerTech {
     opacity: 0%;    // Para tentar apagar o elemento antes da animação
     
     position: relative;
@@ -33,7 +33,7 @@
     .description {
         width: auto;
     }
-    .svg-list {
+    .listSvg {
         position: absolute;
         bottom: 20px;
         left: 20px;
@@ -47,7 +47,7 @@
     }
 }
 
-#text-description {
+#textDescription {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -62,36 +62,36 @@
         max-width: 400px;
         margin: 20px 10px 0 20px;
     }
-    .text-1 {
+    .text1 {
         text-align: center;
         font-weight: 700;
         font-size: 2em;
     }
-    .text-2 {
+    .text2 {
         font-weight: 400;
         font-size: 1em;
         color: #A27B5C;
     }
-    .text-3 {
+    .text3 {
         font-weight: 400;
         font-size: 1em;
     }
 }
 
-.banner-tech:hover {
+.bannerTech:hover {
     transform: scale(1.02);
 }
-.banner-front:hover {
+.bannerFront:hover {
     .tittle {
         color: #61DAFB;
     }
 }
-.banner-back:hover {
+.bannerBack:hover {
     .tittle {
         color: #777BB4;
     }
 }
-.banner-developing:hover {
+.bannerDeveloping:hover {
     .tittle {
         color: #F05032;
     }
@@ -118,22 +118,22 @@
     }
 }
 
-.banner-front:nth-child(1) {
+.bannerFront:nth-child(1) {
     animation: moveToRight 2s ease;
 
     opacity: 100%;
 }
-.banner-tech:nth-child(2) {
+.bannerTech:nth-child(2) {
     animation: moveToRight 2s ease .2s;
 
     opacity: 100%;
 }
-.banner-tech:nth-child(3) {
+.bannerTech:nth-child(3) {
     animation: moveToRight 2s ease .4s;
 
     opacity: 100%;
 }
 
-#text-description {
+#textDescription {
     animation: moveToLeft 2s ease;
 }

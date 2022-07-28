@@ -1,12 +1,12 @@
 import orbital from '../../assets/svg/orbital_icons.svg'
-import './index.scss'
+import styles from './index.module.scss'
 
 export function Menu() {
     return(
         <div>
-            <img id="orbital" src={orbital} />
-            <p id="codeApresentation">
-                <a className='text-regular text-regular-pink'>const </a><a className='text-bold text-bold-purple'>DanielDuarte</a><a className='text-regular text-regular-pink'>:</a><a className='text-bold text-bold-cian'> Developer </a><a className='text-regular text-regular-pink'>=</a> <a className='text-regular'>&#123;</a><br /><a className='text-regular'>&emsp;type:</a><a className='text-bold'> "Full-Stack"</a><a className='text-regular'>,</a><br /><a className='text-regular'>&emsp;language:</a><a className='text-bold'> "Typescript"</a><br /><a className='text-regular'>&#125;</a>
+            <img id={styles.orbital} src={orbital} />
+            <p id={styles.codeApresentation}>
+                <a className={`${styles.textRegular} ${styles.textRegularPink}`}>const </a><a className={`${styles.textBold} ${styles.textBoldPurple}`}>DanielDuarte</a><a className={`${styles.textRegular} ${styles.textRegularPink}`}>:</a><a className={`${styles.textBold} ${styles.textBoldCian}`}> Developer </a><a className={`${styles.textRegular} ${styles.textRegularPink}`}>=</a> <a className={styles.textRegular}>&#123;</a><br /><a className={styles.textRegular}>&emsp;type:</a><a className={styles.textBold}> "Full-Stack"</a><a className={styles.textRegular}>,</a><br /><a className={styles.textRegular}>&emsp;language:</a><a className={styles.textBold}> "Typescript"</a><br /><a className={styles.textRegular}>&#125;</a>
             </p>
       </div>
     )
