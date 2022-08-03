@@ -28,7 +28,7 @@ export function Contact() {
             empty = true;
         }
         if (name == '') {
-            setNameEmpyt('empty');
+            setNameEmpyt('Empty');
             empty = true;
         }
         if (subject == '') {
@@ -82,7 +82,7 @@ export function Contact() {
                     <input className={styles.nameInput+nameEmpyt} type="text" name="name" placeholder='Name' autoComplete='off' value={name}  onChange={(e)=>{setName(e.target.value)}}/>
                     <input className={styles.subjectInput+subjectEmpyt} type="text" name="subject" placeholder='Subject' autoComplete='off' value={subject} onChange={(e)=>{setSubject(e.target.value)}} />
                     <textarea className={styles.textarea+messageEmpyt} name="Message" placeholder='Message' autoComplete='off' value={message}  onChange={(e)=>{setMessage(e.target.value)}}/>
-                    <button type="submit">Send</button>
+                    <button className={styles.formButton}type="submit">Send</button>
                 </form>
             </div>
 
@@ -111,7 +111,7 @@ export function Contact() {
                     </div>
 
                     <div className={styles.copyContainer}>
-                        <span className={styles.emailCopy}>danielduarte.tech@protonmail.com</span>
+                        <span className={styles.textCopy}>danielduarte.tech@protonmail.com</span>
                         <button className={styles.copyButton} onClick={()=>{
                             copy('danielduarte.tech@protonmail.com');
                             handleButton1();
@@ -122,7 +122,7 @@ export function Contact() {
                                     <circle fill="#4CAF50" cx="24" cy="24" r="21"/>
                                     <polygon fill="#CCFF90" points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"/>
                                 </svg>
-                                <span className={styles.copiedSpan}>Copied !</span>
+                                {/* <span className={styles.copiedSpan}>Copied !</span> */}
                             </div>    
                             : <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 460" xmlSpace="preserve">
                                 <g>
@@ -143,8 +143,8 @@ export function Contact() {
                         </button>
                     </div>
 
-                    <div className={styles.copyContainer}>
-                        <span className={styles.websiteCopy}>danielduarte.dev</span>
+                    {/* <div className={`${styles.copyContainer} ${styles.websiteContainer}`}>
+                        <span className={styles.textCopy}>danielduarte.dev</span>
                         <button className={styles.copyButton} onClick={()=>{
                             copy('https://danielduarte.dev');
                             handleButton2();
@@ -174,9 +174,9 @@ export function Contact() {
                             </svg>
                         }
                         </button>
-                    </div>
+                    </div> */}
 
-                    <div className={styles.copyContainer}>
+                    <div className={`${styles.copyContainer} ${styles.telegramContainer}`}>
                         <span className={styles.websiteCopy}>@danrib27</span>
                         <button className={styles.copyButton} onClick={()=>{
                             copy('@danrib27');
@@ -188,7 +188,7 @@ export function Contact() {
                                     <circle fill="#4CAF50" cx="24" cy="24" r="21"/>
                                     <polygon fill="#CCFF90" points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"/>
                                 </svg>
-                                <span className={styles.copiedSpan}>Copied !</span>
+                                {/* <span className={styles.copiedSpan}>Copied !</span> */}
                             </div>
                             : <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 460" xmlSpace="preserve">
                                 <g>
@@ -209,7 +209,7 @@ export function Contact() {
                         </button>
                     </div>
                     
-                    <span className={styles.numberText}>If you wanna talk to me directly, this is my Telegram. </span>
+                    <span className={styles.numberText}>If you wanna talk to me directly, these     are my Email and Telegram. </span>
                 </div>
             </div>
         </div>
