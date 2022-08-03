@@ -30,7 +30,7 @@ export function App() {
   }
 
   return (
-    <div>
+    <div className='menu'>
       <div className={styles.header}>
         <a onClick={()=>setComponent(0)}><img id={styles.logo} src={logo} /></a>
         <nav>
@@ -48,7 +48,7 @@ export function App() {
 	            </g>
             </svg>
             </button></li>
-            <li><button onClick={()=>setComponent(1)}>
+            <li><button className={styles.navButton} onClick={()=>setComponent(1)}>
               <span className={styles.textMenu}>.ABOUT()</span>
               <svg className={styles.svgMenu} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z"/>
@@ -56,7 +56,7 @@ export function App() {
             </button></li>
             {/* <li><button onClick={()=>setComponent(2)}>.WORKS()</button></li>
             <li><button onClick={()=>setComponent(3)}>.TRAINING()</button></li> */}
-            <li><button onClick={()=>setComponent(4)}>
+            <li><button className={styles.navButton}  onClick={()=>setComponent(4)}>
               <span className={styles.textMenu}>.CONTACT()</span>
               <svg className={styles.svgMenu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" xmlSpace="preserve">
 	              <g>
@@ -88,8 +88,9 @@ export function App() {
           </a>
       </div>
 
-      <HandleComponent />
-
+      <main>
+        <HandleComponent />
+      </main>
     </div>
   )
 }

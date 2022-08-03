@@ -49,11 +49,11 @@ svg {
 }
 
 // Effects
-button:hover, #logo:hover {
+.navButton:hover, #logo:hover {
     cursor: pointer;
 }
 
-button:hover {
+.navButton:hover {
     color: #D65A31;
     transition: .4s linear;
 }
@@ -66,7 +66,7 @@ button:hover {
 
     .header {
         position: fixed;
-        bottom: 0;
+        bottom: 10px;
 
         .textMenu {
             display: none;
@@ -78,6 +78,10 @@ button:hover {
         nav {       // Align nav to center
             position: absolute;
             left: 0;
+
+            background: #222831;
+            border-top: solid 1px #393E46;
+
         }
         ul {
             width: 100vw;
