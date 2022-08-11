@@ -147,11 +147,16 @@ main {
 //media
 @media (max-width: 768px) {
     #about {
+        z-index: -1;
         align-self: center;
         flex-direction: column-reverse;
         justify-content: space-between;
-        height: calc(100vh - 90px);
+        height: 110vh;
         margin: 20px;
+        margin-bottom: 60px;
+    }
+    .bannerContainer {
+        margin-top: 10px;
     }
     .bannerTech span {
         margin: 10px 10px 0;
