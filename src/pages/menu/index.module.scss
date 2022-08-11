@@ -59,32 +59,28 @@ p:hover {
         }
     }
 }
+@media (min-width: 1025px) {
+    #orbital {
+        animation: transOpacity 2s ease;
 
-#orbital {
-    animation: transOpacity 2s ease;
-
-    @keyframes transOpacity {
-        0% {
-            opacity: 0%;
-            height: 50%;
-            top: 25%;
-        }
-        100% {
-            opacity: 60%;
-            height: 100%;
+        @keyframes transOpacity {
+            0% {
+                opacity: 0%;
+                height: 50%;
+                top: 25%;
+            }
+            100% {
+                opacity: 60%;
+                height: 100%;
+            }
         }
     }
 }
-
 // Media
 // Laptop - 1024px/654px
 @media (max-width: 1024px) {
     html{
         font-size: 90%;
-    }
-    #orbital {
-        width: 80vw;
-        top: 15vh;
     }
     p {
         width: 96.5vw;
@@ -99,8 +95,8 @@ p:hover {
         font-size: 80%;
     }
     #orbital {
-        width: 80vw;
-        top: 15vh;
+        top: 10vh;
+        height: 80%;
     }
     p {
         width: 96.5vw;
@@ -114,6 +110,7 @@ p:hover {
     html{
         font-size: 80%;
     }
+    
     p {
         width: 96.5vw;
         position: relative;
